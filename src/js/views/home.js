@@ -28,7 +28,6 @@ const Contact = ({ contact, index }) => {
         phone: phone,
         address: address,
         imageUrl: contact.imageUrl,
-
       }, index);
     }
   }, [editing, name, email, phone, address])
@@ -37,28 +36,23 @@ const Contact = ({ contact, index }) => {
     <div className="contact mt-2">
       <img className="contact-image" src={contact.imageUrl} alt={contact.name} />
       <div className="contact-info">
-
-
-
         <ul>
           <li>{editing ? <input value={name} onChange={ev => setName(ev.target.value)} /> : <span>{store.contacts[index].name}</span>}</li>
-          <li>{editing ? <input value={email} onChange={ev => setEmail(ev.target.value)} /> : <span>{store.contacts[index].email}</span>}</li>
-          <li><i class="fa-solid fa-phone" /> {editing ? <input value={phone} onChange={ev => setPhone(ev.target.value)} /> : <span>{store.contacts[index].phone}</span>}</li>
-          <li>{editing ? <input value={address} onChange={ev => setAddy(ev.target.value)} /> : <span>{store.contacts[index].address}</span>}</li>
+          <li><i className="fa-solid fa-envelope"/>  {editing ? <input value={email} onChange={ev => setEmail(ev.target.value)} /> : <span>{store.contacts[index].email}</span>}</li>
+          <li><i className="fa-solid fa-phone" />  {editing ? <input value={phone} onChange={ev => setPhone(ev.target.value)} /> : <span>{store.contacts[index].phone}</span>}</li>
+          <li><i className="fa-solid fa-location-dot"/>  {editing ? <input value={address} onChange={ev => setAddy(ev.target.value)} /> : <span>{store.contacts[index].address}</span>}</li>
         </ul>
         <div className="button-container">
-          <button
-            className="btn btn-primary"
-            onClick={() => setEditing(!editing)}
-          >
-            {editing ? "Save" : "Edit"}
+          <button className="btn" onClick={() => setEditing(!editing)}>
+            <i className="fa-solid fa-pencil"/> {editing ? "Save" : "Edit"}
           </button>
-          <button className="btn btn-danger">Delete</button>
+          <button className="btn">
+            <i className="fa-solid fa-trash-can"/> Delete
+          </button>
         </div>
       </div>
     </div>
   );
-
 }
 
 export const Home = () => {
@@ -66,27 +60,20 @@ export const Home = () => {
   const [render, rerender] = useState(false);
 
   const newContact = {
-    name: "jane Doe",
+    name: "Jane Doe",
     email: "JaneDoe@yahoo.com",
     phone: '+1(000)-0000',
     address: "123 somewhere rd. Anahiem,CA",
     imageUrl: "https://cdn.pixabay.com/photo/2017/06/01/00/44/smiling-2362136_1280.jpg"
   }
 
-
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-4 offset-md-4">
-          <button
-            onClick={() => actions.addContact(newContact)}
-            className="btn btn-primary"
-          >
+          <button onClick={() => actions.addContact(newContact)} className=" createNewContact btn btn-primary">
             Add New Contact
           </button>
-
-
-
         </div>
       </div>
       <div className="col-md-8 offset-md-2">
@@ -95,10 +82,9 @@ export const Home = () => {
         ))}
       </div>
       <hr />
-
-
     </div>
-
   )
 }
+
+
 

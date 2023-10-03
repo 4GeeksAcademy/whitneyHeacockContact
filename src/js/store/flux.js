@@ -4,8 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		randomKey: "Something random.",
 		contacts: [
 		  {
-			name: "jane Doe",
-			email: +"JaneDoe@yahoo.com",
+			name: "Jane Doe",
+			email: "JaneDoe@yahoo.com",
 			phone: '+1(000)-0000',
 			address: "123 somewhere rd. Anahiem,CA",
 			imageUrl: "https://cdn.pixabay.com/photo/2017/06/01/00/44/smiling-2362136_1280.jpg"
@@ -20,7 +20,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			imageUrl: "https://cdn.pixabay.com/photo/2019/08/27/20/27/torrent-4435196_1280.jpg"
 		  },
 		  {
-			name: "jason born",
+			name: "Jason born",
 			email: "JasonBorn@hotmail.com",
 			phone: "+1 (000)-0000",
 			address: "789 unknown lane Houston, TX",
