@@ -1,0 +1,32 @@
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    justify-items: center;
+  }
+  
+
+
+ 
+  .contact img {
+    border-radius: 50%; 
+    width: 9rem; 
+    height: 8rem;
+  }
+  
+  .contact ul {
+    list-style-type: none;
+    padding-left: unset;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .contact-info {
+    margin-left: 100px;
+  }

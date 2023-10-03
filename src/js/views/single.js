@@ -20,7 +20,3 @@ export const Single = props => {
 		</div>
 	);
 };
-
-Single.propTypes = {
-	match: PropTypes.object
-};
